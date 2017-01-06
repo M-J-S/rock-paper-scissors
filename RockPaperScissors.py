@@ -30,7 +30,6 @@ while playerChoice != 'q':
         else:
             print("Computer chose scissors")
             print("you win, play again? y/n")
-        break
     elif (playerChoice == 'p'):
         playerNumber = 2
         if (computerChoice == 1):
@@ -42,7 +41,6 @@ while playerChoice != 'q':
         else:
             print("Computer chose scissors")
             print("you lose, play again? y/n")
-        break
     elif (playerChoice == 's'):
         playerNumber = 3
         if (computerChoice == 1):
@@ -54,9 +52,29 @@ while playerChoice != 'q':
         else:
             print("Computer chose scissors")
             print("tie, play again? y/n")
-        break
     else:
         print("Enter a valid input")
+        playerChoice = input("").lower()
+
+
+    yesOrNo = input("").lower()
+    if (yesOrNo == 'n'):
+        break
+    else:
+        #rock, paper, scissors instructions
+        print("------------------------------------------------------------------")
+        print("rock, paper, scissors!")
+        print("\nr = rock")
+        print("p = paper")
+        print("s = scissors")
+        print("q = quit")
+        print("------------------------------------------------------------------")
+
+        #computer's random choice (Can be either 1, 2, or 3)
+        computerChoice = randrange(1, 4)
+
+
+        #Takes input from player and then lowercases incase player enters a capital letter
         playerChoice = input("").lower()
 
 

@@ -22,6 +22,7 @@ playerChoice = input("").lower()
 while playerChoice != 'q':
 
     #converts player's choice to a number to make comparing to the computer's choice easier or tells player their selection isn't valid
+    #player chooses rock and 3 options for whatever computer chooses
     if (playerChoice == 'r'):
         playerNumber = 1
         if (computerChoice == 1):
@@ -44,7 +45,8 @@ while playerChoice != 'q':
             print("Computer: " + str(computerScore))
             print("You: " + str(playerScore))
             print("Play again? y/n")
-
+            
+    #player chooses paper and 3 options for whatever computer chooses
     elif (playerChoice == 'p'):
         playerNumber = 2
         if (computerChoice == 1):
@@ -67,6 +69,8 @@ while playerChoice != 'q':
             print("Computer: " + str(computerScore))
             print("You: " + str(playerScore))
             print("Play again? y/n")
+            
+    #player chooses scissors and 3 options for whatever computer chooses
     elif (playerChoice == 's'):
         playerNumber = 3
         if (computerChoice == 1):
@@ -93,7 +97,7 @@ while playerChoice != 'q':
         print("Enter a valid input")
         playerChoice = input("").lower()
 
-
+    #takes user input of either y/n
     yesOrNo = input("").lower()
     if (yesOrNo == 'n'):
         break

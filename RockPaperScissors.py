@@ -12,6 +12,7 @@ print("------------------------------------------------------------------")
 #computer's random choice (Can be either 1, 2, or 3)
 computerChoice = randrange(1, 4)
 
+#global variables to keep track of score
 computerScore = 0
 playerScore = 0
 

@@ -27,22 +27,22 @@ while playerChoice != 'q':
         if (computerChoice == 1):
             print("Computer chose rock")
             print("tie, score:")
-            print("Computer: %d") % computerScore
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
         elif (computerChoice == 2):
             print("Computer chose paper")
             computerScore += 1
             print("you lose, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
         else:
             print("Computer chose scissors")
             playerScore += 1
             print("you win, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
 
     elif (playerChoice == 'p'):
@@ -51,21 +51,21 @@ while playerChoice != 'q':
             print("Computer chose rock")
             playerScore += 1
             print("you win, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
         elif (computerChoice == 2):
             print("Computer chose paper")
             print("tie, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
         else:
             print("Computer chose scissors")
             computerScore += 1
             print("you lose, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
     elif (playerChoice == 's'):
         playerNumber = 3
@@ -73,21 +73,21 @@ while playerChoice != 'q':
             print("Computer chose rock")
             computerScore += 1
             print("you lose, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
         elif (computerChoice == 2):
             print("Computer chose paper")
             playerScore += 1
             print("you win, score:")
-            print("Computer: %d" % computerScore)
-            print("You: %d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
         else:
             print("Computer chose scissors")
             print("tie, score:")
-            print("Computer:%d" % computerScore)
-            print("You:%d" % playerScore)
+            print("Computer: " + str(computerScore))
+            print("You: " + str(playerScore))
             print("Play again? y/n")
     else:
         print("Enter a valid input")
@@ -113,6 +113,7 @@ while playerChoice != 'q':
 
         #Takes input from player and then lowercases incase player enters a capital letter
         playerChoice = input("").lower()
+
 
 
 

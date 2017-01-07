@@ -12,6 +12,9 @@ print("------------------------------------------------------------------")
 #computer's random choice (Can be either 1, 2, or 3)
 computerChoice = randrange(1, 4)
 
+computerScore = 0
+playerScore = 0
+
 
 #Takes input from player and then lowercases incase player enters a capital letter
 playerChoice = input("").lower()
@@ -23,35 +26,69 @@ while playerChoice != 'q':
         playerNumber = 1
         if (computerChoice == 1):
             print("Computer chose rock")
-            print("tie, play again? y/n")
+            print("tie, score:")
+            print("Computer: %d") % computerScore
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
         elif (computerChoice == 2):
             print("Computer chose paper")
-            print("you lose, play again? y/n")
+            computerScore += 1
+            print("you lose, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
         else:
             print("Computer chose scissors")
-            print("you win, play again? y/n")
+            playerScore += 1
+            print("you win, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
+
     elif (playerChoice == 'p'):
         playerNumber = 2
         if (computerChoice == 1):
             print("Computer chose rock")
-            print("you win, play again? y/n")
+            playerScore += 1
+            print("you win, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
         elif (computerChoice == 2):
             print("Computer chose paper")
-            print("tie, play again? y/n")
+            print("tie, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
         else:
             print("Computer chose scissors")
-            print("you lose, play again? y/n")
+            computerScore += 1
+            print("you lose, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
     elif (playerChoice == 's'):
         playerNumber = 3
         if (computerChoice == 1):
             print("Computer chose rock")
-            print("you lose, play again? y/n")
+            computerScore += 1
+            print("you lose, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
         elif (computerChoice == 2):
             print("Computer chose paper")
-            print("you win, play again? y/n")
+            playerScore += 1
+            print("you win, score:")
+            print("Computer: %d" % computerScore)
+            print("You: %d" % playerScore)
+            print("Play again? y/n")
         else:
             print("Computer chose scissors")
-            print("tie, play again? y/n")
+            print("tie, score:")
+            print("Computer:%d" % computerScore)
+            print("You:%d" % playerScore)
+            print("Play again? y/n")
     else:
         print("Enter a valid input")
         playerChoice = input("").lower()
@@ -76,6 +113,7 @@ while playerChoice != 'q':
 
         #Takes input from player and then lowercases incase player enters a capital letter
         playerChoice = input("").lower()
+
 
 
 

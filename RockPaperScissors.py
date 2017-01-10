@@ -48,12 +48,13 @@ while playerChoice != 'q':
         print("Computer chose " + RPS[str(computerChoice)])
         print("Tie!")
 
-    #if  the player's choice of RPS[r:3, p:1, s:2]
+    #if  the player's choice of RPS[r:3, p:1, s:2] = the computer's choice of 3, 1, or 2 then the player is awarded a point and You win! is displayed
     elif(RPS[playerChoice] == str(computerChoice)):
         playerScore += 1
         print("Computer chose " + RPS[str(computerChoice)])
         print("You win!")
 
+    #any other results will be the computer's choice beating the player's choice and computer will be awarded a point and You lose! is displayed
     else:
         computerScore += 1
         print("Computer chose " + RPS[str(computerChoice)])

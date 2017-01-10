@@ -1,10 +1,13 @@
 from random import randrange
 
-RPShash = {}
+RPS = {}
 
-RPShash['1'] = '3'
-RPShash['2'] = '1'
-RPShash['3'] = '2'
+RPS['r'] = '3'
+RPS['p'] = '1'
+RPS['s'] = '2'
+RPS['1'] = 'r'
+RPS['2'] = 'p'
+RPS['3'] = 's'
 
 computerScore = 0
 playerScore = 0
@@ -14,21 +17,20 @@ while playerChoice != 'q':
     #rock, paper, scissors instructions
     print("------------------------------------------------------------------")
     print("rock, paper, scissors!")
-    print("\n1 = rock")
-    print("2 = paper")
-    print("3 = scissors")
+    print("\nr = rock")
+    print("p = paper")
+    print("s = scissors")
     print("q = quit")
     print("------------------------------------------------------------------")
 
     #computer's random choice (Can be either 1, 2, or 3)
     computerChoice = randrange(1, 4)
     
-
     #Takes input from player and then lowercases incase player enters a capital letter
     playerChoice = input("")
 
 
-    while (playerChoice != '1' and playerChoice != '2' and playerChoice != '3' and playerChoice != 'q'):
+    while (playerChoice != 'r' and playerChoice != 'p' and playerChoice != 's' and playerChoice != 'q'):
         print("Enter a valid input")
         playerChoice = input("")
 
@@ -37,18 +39,18 @@ while playerChoice != 'q':
         print("Computer: " + str(computerScore))
         print("You: " + str(playerScore))
         
-    elif(str(playerChoice) == str(computerChoice)):
+    elif(str(playerChoice) == RPS[str(computerChoice)]):
         computerScore += 1
         playerScore += 1
-        print("Computer chose " + str(computerChoice))
+        print("Computer chose " + RPS[str(computerChoice)])
         print("Tie!")
 
-    elif(RPShash[playerChoice] == str(computerChoice)):
+    elif(RPS[playerChoice] == str(computerChoice)):
         playerScore += 1
-        print("Computer chose " + str(computerChoice))
+        print("Computer chose " + RPS[str(computerChoice)])
         print("You win!")
 
-    elif(RPShash[str(computerChoice)] == playerChoice):
+    else:
         computerScore += 1
-        print("Computer chose " + str(computerChoice))
+        print("Computer chose " + RPS[str(computerChoice)])
         print("You lose!")
